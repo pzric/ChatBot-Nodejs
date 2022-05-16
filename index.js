@@ -5,17 +5,17 @@ var request = require('request');
 //utilizara un archivo json
 var app = express();
 app.use(bodyParser.json());
-//establesco el puerto
+//establezco el puerto
 app.listen(3000, function(){
   console.log("El servidor se encuentra en el puerto 3000");
 });
 //APP_TOKEN
-const APP_TOKEN  = 'EAADhccCoAkMBAOmzMQPmxQOMsXsB4t9Pe3ct36fShZBmGZCZCyVhJZBfZA0Of1Ef5dL1ZCN8m10S4s6wtU2cLHvZB66jC2O6n7yiUnJoB5DhXhj6C8Ngr9NnVw2mZCiNMjXr9ZCSFOctsFZBrKOaZAJZBsRS5K6iEPPMXcQAVZCkv64LU1wZDZD'
+const APP_TOKEN  = '--'
 //configurando la ruta
 app.get('/',function(req, res){
   res.send('En linea');
 });
-//configurando token de facebook
+//configurando token
 app.get('/webhook', function(req, res){
   if(req.query['hub.verify_token'] === 'test_token_say_hello'){
     res.send(req.query['hub.challenge']);
