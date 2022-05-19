@@ -1,2 +1,2 @@
 # ChatBot-Nodejs
-ChatBot desarrollado para pagina de facebook
+ChatBot desarrollado para pagina web
